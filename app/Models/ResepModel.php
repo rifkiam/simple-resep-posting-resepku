@@ -8,10 +8,11 @@ class ResepModel extends Model
 {
     protected $table = 'resep';
     protected $useTimestamps = true;
-    protected $allowedFields = ['judul', 'slug', 'deskripsi', 'bahan_dan_langkah', 'foto', 'suka'];
+    protected $allowedFields = ['judul', 'slug', 'deskripsi', 'bahan', 'langkah', 'foto', 'suka'];
     protected $judul = 'judul';
     protected $deskripsi = 'deskripsi';
-    protected $bahan_dan_langkah = 'bahan_dan_langkah';
+    protected $bahan = 'bahan';
+    protected $langkah = 'langkah';
     protected $foto = 'foto';
     protected $suka = 'suka';
     protected $createdField = 'created_at';

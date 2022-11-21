@@ -6,6 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
+        $data =
+            [
+                'title' => 'Welcome Page',
+            ];
         return view('mainpages/welpage');
     }
 
@@ -24,6 +28,7 @@ class Home extends BaseController
     {
         $data =
         [
+            'title' => 'Registrasi',
             'validation' => \Config\Services::validation()
         ];
         return view('mainpages/registrasi', $data);
@@ -32,6 +37,7 @@ class Home extends BaseController
     public function addresep() 
     {
         $data = [
+            'title' => 'Tambah Resep',
             'validation' => \Config\Services::validation(),
         ];
 

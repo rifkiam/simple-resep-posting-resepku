@@ -87,7 +87,8 @@ class Resep extends BaseController
                 'judul' => $this->request->getVar('judul'),
                 'slug' => $slug,
                 'deskripsi' => $this->request->getVar('deskripsi'),
-                'bahan_dan_langkah' => $this->request->getVar('bahan_dan_langkah'),
+                'bahan' => $this->request->getVar('bahan'),
+                'langkah' => $this->request->getVar('langkah'),
                 'foto' => $nama_sampul,//$this->request->getVar('sampul')
                 'suka' => 0,
                 'id_user' => session()->get('id_user')

@@ -17,8 +17,8 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[37px]">
         <?php foreach ($resep as $res) : ?>
         <div class="">
-            <div class="align-middle overflow-hidden w-[250px] h-[200px]">
-                <img src="/img/<?= $res['foto']; ?>" alt="">
+            <div class="align-middle overflow-hidden h-[165px] ">
+                <img src="/img/<?= $res['foto']; ?>" class="w-full h-full object-cover" alt="">
             </div>
             <h2 class="mt-2 text-[18px] text-[#547794]"><a href="<?= base_url(); ?>/dashboard/<?= $res['slug']; ?>" class="hover:underline"><?= $res['judul']; ?></a></h2>
             <h2 class="text-[14px]"><?= $res['deskripsi']; ?></h2>

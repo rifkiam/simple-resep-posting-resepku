@@ -7,13 +7,20 @@
             <label for="judul">Judul</label><br>
             <input type="text" class="border rounded-lg shadow-sm w-full h-10" id="judul" name="judul">
         </div>
+        <div class="text-red-700 font-bold">
+            <?= $validation->getError('judul'); ?>
+        </div>
         <div class="mb-6">
             <label for="deskripsi">Deskripsi</label><br>
             <div class="border rounded-md shadow-sm"><textarea name="deskripsi" id="deskripsi" style="width: 100%; margin: 0; padding: 0; border-width: 0;"></textarea></div>
         </div>
         <div class="mb-6">
-            <label for="bahan_dan_langkah">Langkah-langkah dan alat bahan</label><br>
-            <div class="border rounded-md shadow-sm"><textarea name="bahan_dan_langkah" id="bahan_dan_langkah" style="width: 100%; margin: 0; padding: 0; border-width: 0;"></textarea></div>
+            <label for="bahan">Bahan</label><br>
+            <div class="border rounded-md shadow-sm"><textarea name="bahan" id="bahan" style="width: 100%; margin: 0; padding: 0; border-width: 0;"></textarea></div>
+        </div>
+        <div class="mb-6">
+            <label for="langkah">Langkah</label><br>
+            <div class="border rounded-md shadow-sm"><textarea name="langkah" id="langkah" style="width: 100%; margin: 0; padding: 0; border-width: 0;"></textarea></div>
         </div>
         <div class="mb-6">
             <!-- <label for="sampul">Upload Foto Masakan</label><br>
@@ -22,10 +29,10 @@
             <input class="block w-full border rounded-md cursor-pointer focus:outline-none shadow-sm" id="foto" name="foto" type="file">
         </div>
         <div class="text-red-700 font-bold">
-            <?= $validation->getError('sampul'); ?>
+            <?= $validation->getError('foto'); ?>
         </div>
         <div class="w-full">
-            <button type="submit" class="bg-[#547794] rounded-md px-3 text-white w-full py-[15px]">Terbitkan Resep</button>
+            <button type="submit" class="bg-[#547794] rounded-md px-3 text-white w-full py-[15px]" onclick="writeText()">Terbitkan Resep</button>
         </div>
     </form>
 </div>
